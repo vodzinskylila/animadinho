@@ -8,24 +8,33 @@
     <style>
         .minha_engrenagem
         {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            animation: engrena 5s infinite linear;
+         
+            animation: engrena 8s infinite alternate;
+        }
+        .engrenagem2
+        {
+            animation: engrena2 8s infinite alternate;
+            margin-left: -49px;
         }
         @keyframes engrena
         {
-            0%   { rotate: 0deg; }
+            0%   { rotate: 60deg; }
             
             100% { rotate: 360deg;  }
+        }
+        @keyframes engrena2
+        {
+            0%   { rotate: -30deg; }
+            
+            100% { rotate: -330deg;  }
         }
 
     </style>
 </head>
 <body>
+
     <img src="engrenagem.png" class="minha_engrenagem">
-
-
+    <img src="engrenagem.png" class="engrenagem2">
 
 </body>
 </html>

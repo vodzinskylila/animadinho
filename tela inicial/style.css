@@ -1,0 +1,109 @@
+:root{
+    --primary: #D081F4
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow: hidden;
+}
+
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav {
+    background-color: var(--primary);
+    width: 100%;
+}
+
+.logo {
+    width: 155px;
+    height: 75px;
+
+}
+
+h2,
+h4,
+form {
+    margin: 0.5rem
+}
+h2{
+    animation: aparecer 3s;
+}
+@keyframes aparecer {
+0% {
+    opacity: 0;
+}
+    100%{
+        opacity: 1;
+    }
+}
+h4{
+    font-weight: 400;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+    font-size: 1.5rem;
+    font-family: 'Urbanist', sans-serif;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.main .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+svg{
+    cursor: pointer;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.login input {
+    margin-top: 0.5rem;
+    background-color: #CFCFCF;
+    border-radius: 100vw;
+    padding: 0.8em;
+    width: 35em;
+    border:none;
+    font-family: urbanist;
+    font-size:16px;
+}
+
+.btn-primary{
+    font-family: urbanist;
+    font-weight: 600;
+    padding: 1em 2em;
+    border-radius: 100vw;
+    border:none;
+    background-color: var(--primary);
+    color:white;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.divisor{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}

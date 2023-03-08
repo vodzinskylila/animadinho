@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout12</title>
+</head>
+<style>
+    body
+    {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(174, 101, 196);
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .tela
+    {
+        width: 940.5px;
+        height: 710.09px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .direita
+    {
+        width: 30%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .retangulo1
+    {
+        width: 150px;
+        height: 100%;
+        background-color: rgb(129, 231, 159);
+    }
+    .esquerda
+    {
+        width: 45%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .retangulo2
+    {
+        width: 100%;
+        height: 150px;
+        background-color: rgb(129, 231, 159);
+    }
+    .meio
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .quadrado
+    {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(129, 231, 159);
+    }
+</style>
+<body>
+    <div class="tela">
+    <div class="direita">
+        <div class="retangulo1"></div>
+    </div>
+    <div class="esquerda">
+        <div class="encima">
+            <div class="retangulo2"></div>
+        </div>
+        <div class="meio">
+            <div class="quadrado"></div>
+            <div class="quadrado"></div>
+        </div>
+        <div class="baixo">
+            <div class="retangulo2"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

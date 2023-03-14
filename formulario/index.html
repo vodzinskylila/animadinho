@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de picolezera</title>
+    <style>
+        .botoes
+        {
+            width: 100%;
+            justify-content: right;
+            display: flex;
+        }
+        button
+        {
+            color:rgb(190, 124, 190);
+            background-color: rgb(122, 196, 122);
+            width: 100px;
+            height: 60px;
+            font-size: 20px;
+        }
+        button:hover
+        {
+        background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend> dados do picolezinho</legend>
+        descrição:
+        <input type="text" class="caixa_larga" id="descrição">
+        <br> <br>
+        digite o preço:
+        <input type="text" class="caixa_larga" id="preço">
+        <br> <br>
+        fornecedor da fita:
+        <input type="text" class="caixa_larga" id="fornecedor">
+        <br> <br>
+        quantidade a desenrolar:
+        <br> <br>
+        <input type="number" class="caixa_larga" id="quantidade">
+        <br> <br>
+        data do pedido:
+        <input type="date" id="data_pedido">
+
+    </fieldset>
+    <br> <br>
+    <fieldset>
+        <legend> sobre o sabor</legend>
+        escolha somente 1 sabor:
+        <br> <br>
+        <input type="radio" id="pimenta" name="sabores">
+        pimenta
+        <input type="radio" id="cenoura" name="sabores">
+        cenoura
+        <input type="radio" id="cimento" name="sabores">
+        cimento
+        <input type="radio" id="abobora" name="sabores">
+        abóbora
+        <br> <br>
+        selecione quais as cores da embalagem:
+        <br> <br>
+        <input type="checkbox" id="amarelo"> amarelo
+        <input type="checkbox" id="verde"> verde
+        <input type="checkbox" id="burro"> burro quando foge
+        <br> <br>
+        selecione um estado para entrega
+        <select id="estado">
+            <option>amapa</option>
+            <option>bahia</option>
+            <option>parana</option>
+            <option selected>santa catarina</option>
+        </select>
+
+    </fieldset>
+    <div class="botoes">
+    <button>enviar</button>
+    <button>limpar</button>
+</div>
+</body>
+
+</html>

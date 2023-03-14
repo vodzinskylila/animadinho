@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>segundo forms</title>
+</head>
+<body>
+    <fieldset>
+        <legend> dados pessoais</legend>
+        <br>
+        nome:
+        <input type="text" class="caixa-larga" id="nome">
+        <br> <br>
+        endereço:
+        <input type="text" class="caixa-larga" id="endereço">
+        <br> <br>
+        cidade
+        <input type="text" class="caixa-larga" id="cidade">
+        <br> <br>
+        estado:
+        <select id="estado" class="estado">
+            <option>são paulo</option>
+            <option>paraná</option>
+        </select>
+    
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>dados profissionais</legend>
+        natureza do cargo:
+        <br>
+        <input type="radio" class="cargos" id="gerencia" name="cargos"> gerência
+        <input type="radio" class="cargos" id="financeiro" name="cargos"> financeiro
+        <input type="radio" class="cargos" id="recepção" name="cargos"> recepção
+        <input type="radio" class="cargos" id="adm" name="cargos"> administrativo
+        <input type="radio" class="cargos" id="juridico" name="cargos"> jurídico
+        <br><br>
+        area de interesse <br>
+        <input type="checkbox" class="areas" id="computacao"> computação
+        <input type="checkbox" class="areas" id="biologia"> biologia
+        <input type="checkbox" class="areas" id="meio-ambiente"> meio meio-ambiente
+        <input type="checkbox" class="areas" id="engenharia"> engenharia
+        <input type="checkbox" class="areas" id="historia"> historia<br>
+        mini_currículo: <br> <br>
+        <textarea class="texto" id="curriculo" cols="30" rows="10"></textarea>
+    </fieldset>
+    <button class="botao">enviar</button>
+    <button class="botao">limpar</button>
+</body>
+</html>

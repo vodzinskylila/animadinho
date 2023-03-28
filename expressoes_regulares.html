@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressões Regulares</title>
+    <style>
+
+        .errado{
+            background-color: lightcoral;
+        }
+        .certo{
+            background-color: lightgreen;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    Digite um CPF: <input onkeyup="Validar()" type="text" id="telefone">
+
+</body>
+
+<script>
+    function Validar() {
+
+        var expressao = /^[0-9]{5}-[0-9]{3}$/g
+        var texto = telefone.value
+        var resposta = expressao.test(texto)
+        if (resposta == false) {
+            telefone.classList.remove('certo');
+            telefone.classList.add('errado');
+        }
+        if(resposta == true){
+            telefone.classList.remove('errado');
+            telefone.classList.add('certo');
+        }
+    }
+</script>
+
+</html>

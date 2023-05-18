@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jzinho</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(0deg, rgb(141, 100, 236), rgb(89, 18, 204));
+            overflow: hidden;
+        }
+
+        .foguetola {
+            position: absolute;
+            left: 870px;
+            top: 750px;
+        }
+
+        .skatola {
+            position: absolute;
+            left: 770px;
+            top: 700px;
+            width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img id="foguete" src="foguete.gif" width="80px" class="foguetola">
+    <img id="skate" src="skate.png" width="80px" class="skatola">
+
+</body>
+
+<script src="jquery-3.7.0.min.js"></script>
+
+<script>
+
+    data = new Date()
+    tempo_inicial = data.getTime()
+
+
+
+    document.onkeydown = Pega_Tecla;
+
+    function Pega_Tecla(e) {
+        e = e || window.event;
+
+        tecla = e.keyCode;
+        console.log(tecla); // MOSTRA O CÓDIGO DA TECLA PRESSIONADA
+
+        data = new Date()
+        tempo_final = data.getTime()
+        if (tempo_final - tempo_inicial > 1000) {
+            tempo_inicial = tempo_final
+            
+            if (tecla == 37) {
+                x = x - 20
+            }
+            if (tecla == 39) {
+                x = x + 20
+            }
+        }
+
+
+    }
+
+
+    temporizador = setTimeout(subir, 1000)
+    x = 870
+    y = 20
+    TOPO = ""
+    ESQUERDA = ""
+
+    function subir() {
+        TOPO = y + "px"
+        $("#foguete").animate({ top: TOPO }, 1000)
+        temporizador = null
+        temporizador = setInterval(descer, 1000)
+    }
+    function descer() {
+        y = y + 90
+
+        if (y > 750) {
+            y = 750
+        }
+
+        TOPO = y + "px"
+        ESQUERDA = x + "px"
+        $("#foguete").animate({ left: ESQUERDA, top: TOPO }, 1000)
+
+    }
+
+
+</script>
+
+</html>
